@@ -8,7 +8,7 @@
     <title>Brasil TI</title>
 </head>
 <body>
-   <button class="hamburger-btn" id="toggle-sidebar">
+   <button class="hamburger-btn" id="toggle-sidebar" aria-label="Alternar menu lateral">
         <i class="fa-solid fa-bars"></i>
     </button>
 
@@ -46,14 +46,45 @@
     </section>
 
     <section id="Servicos" class="page">
-        <h2>Nossos Serviços</h2>
+        <h1>Nossos Serviços:</h1>
+        <br>
         <ul>
-            <li>Desenvolvimento de Software Personalizado</li>
-            <li>Suporte Técnico 24/7</li>
-            <li>Consultoria em Tecnologia da Informação</li>
-            <li>Implementação de Sistemas ERP</li>
-            <li>Segurança da Informação</li>
+            <li><p>Desenvolvimento de Software Personalizado</p></li>
+            <li><p>Suporte Técnico</p></li>
+            <li><p>Consultoria em Tecnologia da Informação</p></li>
+            <li><p>Implementação de Sistemas ERP</p></li>
+            <li><p>Segurança da Informação</p></li>
         </ul>
+    </section>
+
+    <section id="Contatos" class="page">
+        <h2>Se interessou pelos nossos serviços?</h2>
+        <br>
+        <h3>Entre em contato conosco!</h3>
+        <br>
+        <p>Email: sistemas.brasilti@gmail.com
+        <br>Telefone: +55 27 98172-0114
+        <br>Endereço: Rua Jairo Matos Pereira, 600, sala 407, Vila Velha, ES, Brasil
+        <br>Ou preencha o formulário abaixo clicando <a href="#Form" onclick="showpage('Form')">aqui</a>.
+    </p>
+    </section>
+
+    <section id="Form" class="page">
+        <button onclick="showpage('Contatos')">Voltar</button>
+        <h2>Formulário de Contato</h2>
+        <form action="https://formspree.io/f/mayvlrgn" method="POST">
+            <label for="name">Nome:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="_replyto" required><br><br>
+
+            <label for="message">Mensagem:</label><br>
+            <textarea id="message" name="message" class="auto-grow" placeholder="Digite aqui..." rows="6" required></textarea><br><br>
+
+            <button type="submit" class="btn-submit"> Enviar</button>
+            <button type="reset" class="btn-reset"> Limpar</button>
+        </form>
     </section>
     </main>
     <script src="script.js"></script>
