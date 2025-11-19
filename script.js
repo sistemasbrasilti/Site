@@ -1,8 +1,7 @@
-let sidebar; 
-
 document.addEventListener('DOMContentLoaded', () => {
-    sidebar = document.getElementById('sidebar'); 
+    const sidebar = document.getElementById('sidebar');
     const toggleButton = document.getElementById('toggle-sidebar');
+    const links = document.querySelectorAll('.sidebar-menu a, a[href="#Form"]');
 
     if (toggleButton && sidebar) {
         toggleButton.addEventListener('click', () => {
@@ -10,58 +9,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    showpage('Home');
-
-    const links = document.querySelectorAll('.sidebar-menu a');
-    links.forEach(a => {
-        a.addEventListener('click', function (e) {
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href && href.startsWith('#')) {
                 e.preventDefault();
-                const target = href.replace('#', '');
-                if (target) showpage(target);
+                const pageName = href.substring(1);
+                showpage(pageName);
             }
         });
     });
-    
-    enableAutoGrow('.auto-grow');
+
+    enableAutoGrow();
+
+    showpage('Home');
 });
 
-function showpage(name) {
+function showpage(pageName) {
     const pages = document.querySelectorAll('.page');
-    pages.forEach(p => p.classList.remove('active'));
-    
-    const selectedPage = document.getElementById(name);
-    
-    const currentSidebar = document.getElementById('sidebar'); 
-    
+    const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+
+    pages.forEach(page => {
+        page.classList.remove('active');
+    });
+
+    const selectedPage = document.getElementById(pageName);
     if (selectedPage) {
         selectedPage.classList.add('active');
-        if (currentSidebar) {
-            currentSidebar.classList.remove('open'); 
-        }
     }
 
-    const body = document.body;
-    
-    if (name === 'Form') {
-        body.classList.add('hide-sidebar'); 
+    if (sidebar) {
+        sidebar.classList.remove('open');
+    }
+
+    if (pageName === 'Form') {
+        body.classList.add('form-active');
     } else {
-        body.classList.remove('hide-sidebar');
+        body.classList.remove('form-active');
     }
 }
 
-function enableAutoGrow(selector) {
-    const areas = document.querySelectorAll(selector);
-    areas.forEach(area => {
-        area.style.height = 'auto';
-        area.style.height = area.scrollHeight + 'px';
+function enableAutoGrow() {
+    const textareas = document.querySelectorAll('textarea.auto-grow');
+    
+    textareas.forEach(textarea => {
+        textarea.style.height = 'auto';
+        textarea.style.height = textarea.scrollHeight + 'px';
 
-        const onInput = e => {
-            const ta = e.target;
-            ta.style.height = 'auto';              
-            ta.style.height = ta.scrollHeight + 'px';
-        };
-        area.addEventListener('input', onInput);
+        textarea.addEventListener('input', () => {
+            textarea.style.height = 'auto'; 
+            textarea.style.height = textarea.scrollHeight + 'px'; 
+        });
     });
 }
