@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function showpage(pageName) {
     const pages = document.querySelectorAll('.page');
     const sidebar = document.getElementById('sidebar');
-    const body = document.body;
+    const body = document.body; 
 
     pages.forEach(page => {
         page.classList.remove('active');
@@ -49,6 +49,7 @@ function showpage(pageName) {
         body.classList.remove('form-active');
     }
 }
+
 
 function enableAutoGrow() {
     const textareas = document.querySelectorAll('textarea.auto-grow');

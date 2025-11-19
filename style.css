@@ -204,6 +204,7 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
+    align-self: flex-start;
 }
 
 button:hover {
@@ -236,4 +237,12 @@ footer {
     background-color: #f1f1f1;
     border-top: 1px solid #ddd;
     margin-left: var(--sidebar-width);
+}
+
+.form-active > footer {
+    margin-left: 0 !important;
+}
+
+#Form footer {
+    margin-left: 0 !important;
 }
