@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Brasil TI</title>
 </head>
+
 <body>
     <button class="hamburger-btn" id="toggle-sidebar" aria-label="Alternar menu lateral">
         <i class="fa-solid fa-bars"></i>
@@ -14,64 +16,133 @@
 
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <img src="" alt="Brasil TI" class="logo">
+            <img src="assets/images/logo.svg" alt="Brasil TI" class="logo" onclick="showpage('Initial')"
+                style="cursor: pointer;">
         </div>
         <ul class="sidebar-menu">
-            <li><a href="#Home" onclick="showpage('Home' )"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/></svg> Home</a></li>
-            <li><a href="#Servicos" onclick="showpage('Servicos' )"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/></svg> Nossos serviços</a></li>
-            <li><a href="#Contatos" onclick="showpage('Contatos' )"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16"><path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/></svg> Contatos</a></li>
+            <li><a href="#Home" onclick="showpage('Home' )"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                    </svg> Home</a></li>
+            <li><a href="#Servicos" onclick="showpage('Servicos' )"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
+                    </svg> Nossos serviços</a></li>
+            <li><a href="#Contatos" onclick="showpage('Contatos' )"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+                    </svg> Contatos</a></li>
         </ul>
     </nav>
+    <section id="Initial" class="page">
+        <button onclick="showpage('Home')" class="btn btn-primary">Clique aqui</button>
+    </section>
 
     <main>
-        <section id="Home" class="page">
-            <h1>Bem-vindo a Brasil TI</h1>
-            <h2>Sua solução em tecnologia da informação.</h2>
-            <p>Oferecemos serviços especializados em desenvolvimento de software, suporte técnico e consultoria em TI para impulsionar o sucesso do seu negócio. Nossas soluções são personalizadas para atender às necessidades específicas de cada cliente, garantindo eficiência e inovação. Além disso, contamos com uma equipe altamente qualificada e comprometida em entregar resultados excepcionais. Descubra como podemos transformar sua infraestrutura de TI e levar sua empresa ao próximo nível.</p>
-        </section>
-
-        <section id="Servicos" class="page">
-            <h1>Nossos Serviços:</h1>
-            <ul>
-                <li><p>Desenvolvimento de Software Personalizado</p></li>
-                <li><p>Suporte Técnico</p></li>
-                <li><p>Consultoria em Tecnologia da Informação</p></li>
-                <li><p>Implementação de Sistemas ERP</p></li>
-                <li><p>Segurança da Informação</p></li>
-            </ul>
-        </section>
-
-        <section id="Contatos" class="page">
-            <h2>Se interessou pelos nossos serviços?</h2>
-            <h3>Entre em contato conosco!</h3>
-            <p>Email: sistemas.brasilti@gmail.com</p>
-            <p>Telefone: +55 27 98172-0114</p>
-            <p>Endereço: Rua Jairo Matos Pereira, 600, sala 407, Vila Velha, ES, Brasil</p>
-            <p>Ou preencha o formulário abaixo clicando <a href="#Form" onclick="showpage('Form' )">aqui</a>.</p>
-        </section>
-
-        <section id="Form" class="page">
-            <button onclick="showpage('Contatos')">Voltar</button>
-            <h2>Formulário de Contato</h2>
-            <form>
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="_replyto" required>
-
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" class="auto-grow" placeholder="Digite aqui..." rows="4" required></textarea>
-
-                <div class="form-buttons">
-                    <button type="submit" class="btn-submit">Enviar</button>
-                    <button type="reset" class="btn-reset">Limpar</button>
+        <div id="animado">
+            <section id="Home" class="page">
+                <h1>Bem-vindo a Brasil TI</h1>
+                <h2>Sua solução em tecnologia da informação.</h2>
+                <p>Oferecemos serviços especializados em desenvolvimento de software, suporte técnico e consultoria em
+                    TI
+                    para impulsionar o sucesso do seu negócio. Nossas soluções são personalizadas para atender às
+                    necessidades específicas de cada cliente, garantindo eficiência e inovação. Além disso, contamos com
+                    uma
+                    equipe altamente qualificada e comprometida em entregar resultados excepcionais. Descubra como
+                    podemos
+                    transformar sua infraestrutura de TI e levar sua empresa ao próximo nível.</p>
+            </section>
+        </div>
+        <div id="animado">
+            <section id="Servicos" class="page">
+                <h1>Nossos Serviços:</h1>
+                <ul>
+                    <li>
+                        <p>Desenvolvimento de Software Personalizado</p>
+                    </li>
+                    <li>
+                        <p>Suporte Técnico</p>
+                    </li>
+                    <li>
+                        <p>Consultoria em Tecnologia da Informação</p>
+                    </li>
+                    <li>
+                        <p>Implementação de Sistemas ERP</p>
+                    </li>
+                    <li>
+                        <p>Segurança da Informação</p>
+                    </li>
+                </ul>
+                <div id="grid">
+                    <div class="card">
+                        <img src="assets/images/software_development.png" alt="Desenvolvimento de Software">
+                        <h2>Desenvolvimento de Software</h2>
+                        <p>Soluções sob medida para que o seu negócio seja mais eficiente e inovador.</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/tech_support.png" alt="Suporte Técnico">
+                        <h2>Suporte Técnico</h2>
+                        <p>Assistência rápida e eficiente para que você tenha sua infraestrutura sempre funcionando.</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/it_consulting.png" alt="Consultoria em TI">
+                        <h2>Consultoria em TI</h2>
+                        <p>Estratégias tecnológicas para que você possa otimizar processos e impulsionar o crescimento
+                            da empresa.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/erp_systems.png" alt="Sistemas ERP">
+                        <h2>Implementação de ERP</h2>
+                        <p>Integração completa dos setores da sua empresa para que você possa ter uma gestão unificada.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/info_security.png" alt="Segurança da Informação">
+                        <h2>Segurança da Informação</h2>
+                        <p>Proteção avançada para seus dados contra ameaças de hackers e ataques cibernéticos.</p>
+                    </div>
                 </div>
-            </form>
-        </section>
+            </section>
+        </div>
+        <div id="animado">
+            <section id="Contatos" class="page">
+                <h2>Se interessou pelos nossos serviços?</h2>
+                <h3>Entre em contato conosco!</h3>
+                <p>Email: sistemas.brasilti@gmail.com</p>
+                <p>Telefone: +55 27 98172-0114</p>
+                <p>Endereço: Rua Jairo Matos Pereira, 600, sala 407, Vila Velha, ES, Brasil</p>
+                <p>Ou preencha o formulário abaixo clicando <a href="#Form" onclick="showpage('Form' )">aqui</a>.</p>
+            </section>
+        </div>
+        <div id="animado">
+            <section id="Form" class="page">
+                <button onclick="showpage('Contatos')">Voltar</button>
+                <h2>Formulário de Contato</h2>
+                <form>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="_replyto" required>
+
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" class="auto-grow" placeholder="Digite aqui..." rows="4"
+                        required></textarea>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-submit">Enviar</button>
+                        <button type="reset" class="btn-reset">Limpar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -80,4 +151,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

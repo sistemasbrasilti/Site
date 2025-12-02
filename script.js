@@ -21,14 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     enableAutoGrow();
-
-    showpage('Home');
+    showpage('Initial');
 });
 
 function showpage(pageName) {
     const pages = document.querySelectorAll('.page');
     const sidebar = document.getElementById('sidebar');
-    const body = document.body; 
+    const body = document.body;
 
     pages.forEach(page => {
         page.classList.remove('active');
@@ -43,24 +42,38 @@ function showpage(pageName) {
         sidebar.classList.remove('open');
     }
 
-    if (pageName === 'Form') {
+    if (pageName === 'Form' || pageName === 'Initial') {
         body.classList.add('form-active');
     } else {
         body.classList.remove('form-active');
+    }
+    if (pageName === 'Initial') {
+        body.classList.add('initial-active');
+        body.classList.remove('Initial-2')
+    } else {
+        body.classList.remove('initial-active');
+        body.classList.add('Initial-2')
     }
 }
 
 
 function enableAutoGrow() {
     const textareas = document.querySelectorAll('textarea.auto-grow');
-    
+
     textareas.forEach(textarea => {
         textarea.style.height = 'auto';
         textarea.style.height = textarea.scrollHeight + 'px';
 
         textarea.addEventListener('input', () => {
-            textarea.style.height = 'auto'; 
-            textarea.style.height = textarea.scrollHeight + 'px'; 
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
         });
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+});
