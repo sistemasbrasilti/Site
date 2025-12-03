@@ -14,6 +14,9 @@ html {
 }
 
 body {
+    background: url('./assets/images/background.svg');
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     font-size: large;
     display: flex;
@@ -37,7 +40,7 @@ main {
     left: 0;
     height: 100vh;
     width: var(--sidebar-width);
-    background-color: #ffffff;
+    background-color: #fff;
     border-right: 1px solid #ddd;
     padding: 20px;
     transition: transform 0.3s ease-in-out;
@@ -50,6 +53,10 @@ main {
     margin-bottom: 30px;
     text-align: center;
     padding-top: 3rem;
+}
+
+.sidebar-header img {
+    width: 10rem;
 }
 
 .sidebar-menu {
@@ -76,7 +83,8 @@ main {
 }
 
 .sidebar-menu a:hover {
-    background-color: #f0f0f0;
+    background-color: rgb(76, 139, 255);
+    opacity: 0.6;
 }
 
 .hamburger-btn {
@@ -108,6 +116,7 @@ body.form-active .hamburger-btn {
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
+        background-color: #fff;
     }
 
     .sidebar.open {
@@ -129,9 +138,29 @@ body.form-active .hamburger-btn {
     footer {
         margin-left: 0 !important;
     }
+
+    body {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    #Home .container {
+        display: flex;
+        font-size: 2rem;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    #Home .text {
+        margin-left: 0 !important;
+        text-align: left;
+    }
 }
-
-
 
 .page {
     display: none;
@@ -171,6 +200,15 @@ body.form-active .hamburger-btn {
     display: none;
 }
 
+#Initial button {
+    position: fixed;
+    padding: 10px;
+    width: 15rem;
+    background-color: rgb(76, 139, 255);
+
+
+}
+
 .btn.btn-primary {
     background-color: #002776;
     opacity: 0.6;
@@ -189,10 +227,10 @@ body.form-active .hamburger-btn {
     transform: scale(1.02);
 }
 
-#Home {
+#Home.active {
     display: flex;
-    gap: 10rem;
     font-size: 2rem;
+    flex-direction: column;
 }
 
 .title-2 {
@@ -200,14 +238,56 @@ body.form-active .hamburger-btn {
     color: white;
     border-radius: 8px;
 }
+
 .title-1 {
     color: rgb(0, 0, 68)
 }
-#Home .text{
+
+#Home .text {
     color: grey;
     opacity: 0.7;
     font-size: 1.3rem;
+    margin-left: var(--sidebar-width);
 }
-#Home .text, .title{
-    margin-top: 40rem;
+
+#Home .container {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#Home .text,
+.title {
+    margin-top: 3rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-left: var(--sidebar-width);
+}
+
+.img-home {
+    width: 100%;
+    height: 15rem;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    margin-top: 8rem;
+    border: 1px solid rgb(220, 230, 255);
+    border-width: 10px;
+}
+
+.img-home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: large
 }

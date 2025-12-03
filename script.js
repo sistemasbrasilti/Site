@@ -1,25 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const toggleButton = document.getElementById('toggle-sidebar');
-    const links = document.querySelectorAll('.sidebar-menu a, a[href="#Form"]');
+    const links = document.querySelectorAll('.sidebar-menu a');
 
     if (toggleButton && sidebar) {
         toggleButton.addEventListener('click', () => {
             sidebar.classList.toggle('open');
         });
     }
-
-    links.forEach(link => {
-        link.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
-                const pageName = href.substring(1);
-                showpage(pageName);
-            }
-        });
-    });
-
     enableAutoGrow();
     showpage('Initial');
 });
@@ -42,7 +30,7 @@ function showpage(pageName) {
         sidebar.classList.remove('open');
     }
 
-    if (pageName === 'Form' || pageName === 'Initial') {
+    if (pageName === 'Initial') {
         body.classList.add('form-active');
     } else {
         body.classList.remove('form-active');

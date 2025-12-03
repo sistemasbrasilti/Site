@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Brasil TI</title>
 </head>
@@ -16,7 +18,7 @@
 
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <img src="assets/images/logo.svg" alt="Brasil TI" class="logo" onclick="showpage('Initial')"
+            <img src="assets/images/logo.png" alt="Brasil TI" class="logo" onclick="showpage('Initial')"
                 style="cursor: pointer;">
         </div>
         <ul class="sidebar-menu">
@@ -29,11 +31,16 @@
                         height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
                         <path
                             d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
-                    </svg> Nossos serviços</a></li>
-            <li><a href="#Contatos" onclick="showpage('Contatos' )"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                        height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                    </svg> Portifólio</a></li>
+            <li><a href="#Clientes" onclick="showpage('Clientes' )"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                         <path
-                            d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                    </svg>Clientes</a></li>
+            <li><a href="#Contatos" onclick="showpage('Contatos' )"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path
+                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
                     </svg> Contatos</a></li>
         </ul>
     </nav>
@@ -42,113 +49,63 @@
     </section>
     <main>
         <section id="Home" class="page">
-            <div class="title">
-                <h1 class="title-1">Brasil TI</h1>
-                <h1 class="title-2">soluções</h1>
+            <div class="img-home">
+                <img src="./assets/images/ai_chip_banner_realistic.svg" alt="Brasil TI">
             </div>
-            <div class="text">
-                <p><strong>A BRASIL TI SOLUÇÕES,</strong> é uma empresa Capixaba fundada em 2013,
-                    com atuação no mercado de Tecnologia e Inovação, trabalhando
-                    com desenvolvimento de soluções, automações tecnológicas
-                    <strong>(IA e Robótica)</strong> e tecnologia em comunicação.
-                </p>
-                <br>
-                <p>
-                    <strong>Nosso objetivo é a criação de soluções computacionais de alta
-                        disponibilidade,</strong> aliando facilidade de uso com demandas
-                    complexas, visando a criação de soluções corporativas conectadas
-                    para entrega de valores estratégicos
-                </p>
+            <div class="container">
+                <div class="title">
+                    <h1 class="title-1">Brasil TI</h1>
+                    <h1 class="title-2">soluções</h1>
+                </div>
+                <div class="text">
+                    <p><strong>A BRASIL TI SOLUÇÕES,</strong> é uma empresa Capixaba fundada em 2013,
+                        com atuação no mercado de Tecnologia e Inovação, trabalhando
+                        com desenvolvimento de soluções, automações tecnológicas
+                        <strong>(IA e Robótica)</strong> e tecnologia em comunicação.
+                    </p>
+                    <br>
+                    <p>
+                        <strong>Nosso objetivo é a criação de soluções computacionais de alta
+                            disponibilidade,</strong> aliando facilidade de uso com demandas
+                        complexas, visando a criação de soluções corporativas conectadas
+                        para entrega de valores estratégicos
+                    </p>
+                </div>
             </div>
         </section>
         <section id="Servicos" class="page">
-            <h1>Nossos Serviços:</h1>
-            <ul>
-                <li>
-                    <p>Desenvolvimento de Software Personalizado</p>
-                </li>
-                <li>
-                    <p>Suporte Técnico</p>
-                </li>
-                <li>
-                    <p>Consultoria em Tecnologia da Informação</p>
-                </li>
-                <li>
-                    <p>Implementação de Sistemas ERP</p>
-                </li>
-                <li>
-                    <p>Segurança da Informação</p>
-                </li>
-            </ul>
-            <div id="grid">
-                <div class="card">
-                    <img src="assets/images/software_development.png" alt="Desenvolvimento de Software">
-                    <h2>Desenvolvimento de Software</h2>
-                    <p>Soluções sob medida para que o seu negócio seja mais eficiente e inovador.</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/tech_support.png" alt="Suporte Técnico">
-                    <h2>Suporte Técnico</h2>
-                    <p>Assistência rápida e eficiente para que você tenha sua infraestrutura sempre funcionando.</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/it_consulting.png" alt="Consultoria em TI">
-                    <h2>Consultoria em TI</h2>
-                    <p>Estratégias tecnológicas para que você possa otimizar processos e impulsionar o crescimento
-                        da empresa.
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/erp_systems.png" alt="Sistemas ERP">
-                    <h2>Implementação de ERP</h2>
-                    <p>Integração completa dos setores da sua empresa para que você possa ter uma gestão unificada.
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/info_security.png" alt="Segurança da Informação">
-                    <h2>Segurança da Informação</h2>
-                    <p>Proteção avançada para seus dados contra ameaças de hackers e ataques cibernéticos.</p>
-                </div>
-            </div>
+            
         </section>
         <section id="Contatos" class="page">
-            <h2>Se interessou pelos nossos serviços?</h2>
-            <h3>Entre em contato conosco!</h3>
-            <p>Email: sistemas.brasilti@gmail.com</p>
-            <p>Telefone: +55 27 98172-0114</p>
-            <p>Endereço: Rua Jairo Matos Pereira, 600, sala 407, Vila Velha, ES, Brasil</p>
-            <p>Ou preencha o formulário abaixo clicando <a href="#Form" onclick="showpage('Form' )">aqui</a>.</p>
+            <div class="phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                </svg>
+                <p>Edif Premium Office Sala 406
+                    Rua Jose De Almeida Reboucas, 35
+                    Mata da Praia Vitória - ES, CEP 29066-150
+                </p>
+            </div>
+            <div class="phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                </svg>
+                <p>Telefone: +55 27 98172-0114</p>
+            </div>
         </section>
-        <section id="Form" class="page">
-            <button onclick="showpage('Contatos')">Voltar</button>
-            <h2>Formulário de Contato</h2>
-            <form>
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="_replyto" required>
-
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" class="auto-grow" placeholder="Digite aqui..." rows="4"
-                    required></textarea>
-
-                <div class="form-buttons">
-                    <button type="submit" class="btn-submit">Enviar</button>
-                    <button type="reset" class="btn-reset">Limpar</button>
-                </div>
-            </form>
-        </section>
-        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Brasil TI. Todos os direitos reservados.</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
