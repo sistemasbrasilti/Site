@@ -47,13 +47,6 @@ function showpage(pageName) {
     } else {
         body.classList.remove('form-active');
     }
-    if (pageName === 'Initial') {
-        body.classList.add('initial-active');
-        body.classList.remove('Initial-2')
-    } else {
-        body.classList.remove('initial-active');
-        body.classList.add('Initial-2')
-    }
 }
 
 
@@ -71,9 +64,3 @@ function enableAutoGrow() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
-});
