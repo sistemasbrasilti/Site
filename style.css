@@ -291,3 +291,71 @@ footer {
     gap: 1rem;
     font-size: large
 }
+
+#carouselExampleCaptions {
+    width: 100%;
+    height: 43rem;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    align-self: center;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+    background-color: transparent;
+}
+
+.carousel-content {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.carousel-img img {
+    width: 70%;
+}
+
+.carousel-caption {
+    position: relative !important;
+    inset: auto !important;
+    padding: 15px;
+    background-color: transparent;
+    color: var(--color-text-dark);
+    border-radius: 8px;
+    width: 85%;
+    margin-top: 20px;
+    align-self: center;
+    justify-self: center;
+}
+
+.carousel-caption h5 {
+    color: rgb(76, 139, 255);
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    color: #555;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(50%);
+}
+.carousel-text {
+    text-align: left;
+    width: 50%
+}
