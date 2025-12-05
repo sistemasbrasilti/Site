@@ -303,16 +303,16 @@ footer {
 }
 
 .carousel-inner {
-    height: 100%;
+    height: auto;
 }
 
 .carousel-item {
-    height: 100%;
+    height: auto;
     background-color: transparent;
 }
 
 .carousel-content {
-    height: 90%;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
@@ -514,4 +514,3 @@ form input[type="reset"]:hover {
     justify-content: center;
     gap: 2rem;
 }
-
