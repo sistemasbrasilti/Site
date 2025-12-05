@@ -1,15 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const toggleButton = document.getElementById('toggle-sidebar');
-    const links = document.querySelectorAll('.sidebar-menu a');
+    const termos = document.getElementById('termos');
+    const enviar = document.getElementById('enviar');
 
     if (toggleButton && sidebar) {
         toggleButton.addEventListener('click', () => {
             sidebar.classList.toggle('open');
         });
     }
+
     enableAutoGrow();
     showpage('Initial');
+
+    if (termos && enviar) {
+        termos.addEventListener('change', function () { enviar.disabled = !this.checked; });
+
+        enviar.form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Formulário enviado com sucesso!');
+            enviar.form.reset();
+            enviar.disabled = true;
+        });
+    }
 });
 
 function showpage(pageName) {
@@ -37,31 +50,16 @@ function showpage(pageName) {
     }
 }
 
-
 function enableAutoGrow() {
     const textareas = document.querySelectorAll('textarea.auto-grow');
 
     textareas.forEach(textarea => {
-        textarea.style.height = 'auto';
-        textarea.style.height = textarea.scrollHeight + 'px';
-
-        textarea.addEventListener('input', () => {
+        const resize = () => {
             textarea.style.height = 'auto';
             textarea.style.height = textarea.scrollHeight + 'px';
-        });
+        };
+
+        resize();
+        textarea.addEventListener('input', resize);
     });
 }
-document.addEventListener('DOMContentLoaded', function () {
-    const termos = document.getElementById('termos');
-    const enviar = document.getElementById('enviar');
-    if (termos && enviar) {
-        termos.addEventListener('change', function () { enviar.disabled = !this.checked; });
-
-        enviar.form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Formulário enviado com sucesso!');
-            enviar.form.reset();
-            enviar.disabled = true;
-        });
-    }
-});

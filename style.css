@@ -20,6 +20,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: large;
     display: flex;
+    color: grey;
     flex-direction: column;
     min-height: 100%;
     transition: padding-left 0.3s ease-in-out;
@@ -446,6 +447,13 @@ form textarea:focus {
     border: 1.5px solid rgb(76, 139, 255);
     background: #fafafa;
     outline: none;
+}
+
+form textarea {
+    resize: none;
+    overflow: hidden;
+    height: auto;
+    min-height: 5rem;
 }
 
 form input[type="submit"],
