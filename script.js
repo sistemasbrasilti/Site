@@ -50,4 +50,18 @@ function enableAutoGrow() {
             textarea.style.height = textarea.scrollHeight + 'px';
         });
     });
-}    
+}
+document.addEventListener('DOMContentLoaded', function () {
+    const termos = document.getElementById('termos');
+    const enviar = document.getElementById('enviar');
+    if (termos && enviar) {
+        termos.addEventListener('change', function () { enviar.disabled = !this.checked; });
+
+        enviar.form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Formulário enviado com sucesso!');
+            enviar.form.reset();
+            enviar.disabled = true;
+        });
+    }
+});

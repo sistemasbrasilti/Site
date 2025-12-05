@@ -366,7 +366,7 @@ footer {
     width: 100%
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .carousel-caption {
         width: 100%;
         padding: 5px;
@@ -374,7 +374,7 @@ footer {
     }
 
     .carousel-text {
-        width: 100%;
+        width: 70%;
         text-align: center;
     }
 
@@ -411,3 +411,107 @@ footer {
         height: 35rem;
     }
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 32px 24px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+}
+
+form label {
+    color: #222;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+form input,
+form textarea {
+    padding: 10px 12px;
+    border: 1.5px solid rgb(76, 139, 255);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    transition: border, background;
+    margin-bottom: 8px;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 1.5px solid rgb(76, 139, 255);
+    background: #fafafa;
+    outline: none;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    width: 100%;
+    height: 48px;
+    font-size: 1.1em;
+    background: rgb(76, 139, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background, color, transform;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background: rgb(76, 139, 255);
+    color: white;
+    transform: scale(1.03);
+}
+
+.termos-texto input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.termos-texto a {
+    color: black;
+    text-decoration: underline;
+}
+
+.termos-texto a:hover {
+    color: rgb(76, 139, 255);
+}
+
+#Contatos.active {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    align-items: center;
+}
+
+#Clientes.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cliente img {
+    width: 12rem;
+    max-height: 12rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    align-self: center;
+}
+
+.clientes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
