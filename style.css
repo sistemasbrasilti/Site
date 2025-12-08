@@ -161,6 +161,25 @@ body.form-active .hamburger-btn {
         margin-left: 0 !important;
         text-align: left;
     }
+
+    #Contatos.active {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #Contatos .container {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #Contatos .form,
+    #Contatos .phone-all {
+        width: 100% !important;
+    }
 }
 
 .page {
@@ -291,6 +310,11 @@ footer {
     align-items: center;
     gap: 1rem;
     font-size: large
+}
+
+.phone svg {
+    width: 2rem;
+    height: 2rem;
 }
 
 #carouselExampleCaptions {
