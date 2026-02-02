@@ -431,10 +431,6 @@ footer {
         margin-top: 2rem;
         height: auto;
     }
-
-    #carouselExampleCaptions {
-        height: auto;
-    }
 }
 
 form {
@@ -545,4 +541,15 @@ form input[type="reset"]:hover {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+}
+
+@media screen and (max-width:1020px) {
+    #Home .container {
+        flex-direction: column;
+    }
+
+    #Home .container .text {
+        margin-left: 0 !important;
+        margin-top: 2rem;
+    }
 }
